@@ -7,23 +7,33 @@
 //
 
 #import "LZViewController.h"
+#import <LZDefaultView/LZDefaultView.h>
 
 @interface LZViewController ()
+
+@property(nonatomic,weak)LZDefaultView * defaultView;
 
 @end
 
 @implementation LZViewController
 
+- (LZDefaultView *)defaultView
+{
+    if (!_defaultView)
+    {
+        LZDefaultView * defaultView = [LZDefaultView new];
+        [self.view addSubview:defaultView];
+        _defaultView = defaultView;
+    }
+    return _defaultView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.defaultView.backgroundColor = [UIColor redColor];
+    [self.defaultView setImageName:@"Hacker.jpg" firstString:@"你好" secondString:@"世界"];
 }
 
 @end

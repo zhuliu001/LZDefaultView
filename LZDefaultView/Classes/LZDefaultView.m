@@ -57,30 +57,38 @@
     else
     {
         self.imageView.image = [UIImage imageNamed:ImageName];
-        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.height.mas_equalTo(300);
-            make.centerX.mas_equalTo(self);
-            make.centerY.mas_lessThanOrEqualTo(self);
-        }];
         
         self.firstLabel.text = firstString;
         self.firstLabel.textAlignment = NSTextAlignmentCenter;
-        [self.firstLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(self);
-            make.height.mas_equalTo(20);
-            make.top.mas_equalTo(self.imageView.mas_bottom).mas_offset(10);
-            make.centerX.mas_equalTo(self);
-            make.centerY.mas_equalTo(self).mas_offset(50);
-        }];
         
         self.secondLabel.text = secondString;
         self.secondLabel.textAlignment = NSTextAlignmentCenter;
-        [self.secondLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(self);
-            make.height.mas_equalTo(20);
-            make.top.mas_equalTo(self.firstLabel.mas_bottom).mas_offset(10);
-        }];
+        
+        [self setUpConstraints];
     }
+}
+
+- (void)setUpConstraints
+{
+    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(300);
+        make.centerX.mas_equalTo(self);
+        make.centerY.mas_lessThanOrEqualTo(self);
+    }];
+    
+    [self.firstLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self);
+        make.height.mas_equalTo(20);
+        make.top.mas_equalTo(self.imageView.mas_bottom).mas_offset(10);
+        make.centerX.mas_equalTo(self);
+        make.centerY.mas_equalTo(self).mas_offset(50);
+    }];
+    
+    [self.secondLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self);
+        make.height.mas_equalTo(20);
+        make.top.mas_equalTo(self.firstLabel.mas_bottom).mas_offset(10);
+    }];
 }
 
 - (UIImageView *)imageView

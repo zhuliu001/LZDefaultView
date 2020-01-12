@@ -1,9 +1,9 @@
 {
   "name": "LZDefaultView",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A defaultView for VC",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/630775508@qq.com/LZDefaultView",
+  "homepage": "https://github.com/zhuliu001/LZDefaultView.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,13 +12,17 @@
     "630775508@qq.com": "zhuliu001@users.noreply.github.com"
   },
   "source": {
-    "git": "https://github.com/630775508@qq.com/LZDefaultView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/zhuliu001/LZDefaultView.git",
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "LZDefaultView/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
   "dependencies": {
     "Masonry": [
 

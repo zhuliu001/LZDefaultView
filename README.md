@@ -9,6 +9,29 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+#import <LZDefaultView/LZDefaultView.h>
+
+@property(nonatomic,weak)LZDefaultView * defaultView;
+
+- (LZDefaultView *)defaultView
+{
+    if (!_defaultView)
+    {
+        LZDefaultView * defaultView = [LZDefaultView new];
+        [self.view addSubview:defaultView];
+        _defaultView = defaultView;
+    }
+    return _defaultView;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.defaultView.backgroundColor = [UIColor redColor];
+    [self.defaultView setImageName:@"Hacker.jpg" firstString:@"你好" secondString:@"世界"];
+}
+
 ## Requirements
 
 ## Installation
