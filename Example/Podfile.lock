@@ -1,15 +1,22 @@
 PODS:
-  - LZDefaultView (0.1.0)
+  - LZDefaultView (0.1.0):
+    - Masonry
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - LZDefaultView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   LZDefaultView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LZDefaultView: 465e75c4961121b7e77a70ac9367fdb34b24a0d5
+  LZDefaultView: 7c5ab9b174362f2b46bcff9deacd4541815ae4d4
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 81d39ad5a6b40aa26984ac55f94a9d7da62c28b9
 

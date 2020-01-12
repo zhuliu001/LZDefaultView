@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "LZDefaultView/Classes/**/*"
+  "source_files": "LZDefaultView/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  }
 }
