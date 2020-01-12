@@ -12,8 +12,6 @@
 		40D46EC132CB71C92A5CF3A52EA77A77 /* LZDefaultView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1653EC9E1F296DB0D0400F11D0B0207A /* LZDefaultView-dummy.m */; };
 		4609EB1AE152CB76F439B29390A07F1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		7690BD97CA2ACBCE95D73DD50484E220 /* LZDefaultView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB13AE44224E888C1268CACE43E683C /* LZDefaultView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EB2F64123CAEC2B00B82891 /* LZDefaultView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB2F63F23CAEC2B00B82891 /* LZDefaultView.h */; };
-		8EB2F64223CAEC2B00B82891 /* LZDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2F64023CAEC2B00B82891 /* LZDefaultView.m */; };
 		BAD86450A22C85EE5BA23463C8AD1600 /* Pods-LZDefaultView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3815B7C001ECF145321C2666D294CD7 /* Pods-LZDefaultView_Example-dummy.m */; };
 		BEB501E98919752908B1062AEB5057C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		CF4C7CD5A085B6FC0BBA1D8A1FC698FC /* Pods-LZDefaultView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9C0A5C7E19A5F48D09783FB27FFE02 /* Pods-LZDefaultView_Tests-dummy.m */; };
@@ -57,8 +55,6 @@
 		7AB13AE44224E888C1268CACE43E683C /* LZDefaultView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LZDefaultView-umbrella.h"; sourceTree = "<group>"; };
 		7C2367CF9917A516C93CF93AD2341003 /* Pods-LZDefaultView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LZDefaultView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8762DC3EFBBED094A620A6540D56A112 /* Pods_LZDefaultView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZDefaultView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB2F63F23CAEC2B00B82891 /* LZDefaultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZDefaultView.h; sourceTree = "<group>"; };
-		8EB2F64023CAEC2B00B82891 /* LZDefaultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZDefaultView.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A66F0FA781F23B557968C3ADCAF7C1BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B0EC17A08B52AEB6206B2BDD012410A9 /* LZDefaultView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LZDefaultView-prefix.pch"; sourceTree = "<group>"; };
@@ -205,8 +201,6 @@
 		DE2D66E816B2D3853AEB2AEEF6FBD147 /* LZDefaultView */ = {
 			isa = PBXGroup;
 			children = (
-				8EB2F63F23CAEC2B00B82891 /* LZDefaultView.h */,
-				8EB2F64023CAEC2B00B82891 /* LZDefaultView.m */,
 				DFC0D2F83988856607C570A0334C903B /* Pod */,
 				5D6211644F474F0C413706F77CB9908C /* Support Files */,
 			);
@@ -248,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7690BD97CA2ACBCE95D73DD50484E220 /* LZDefaultView-umbrella.h in Headers */,
-				8EB2F64123CAEC2B00B82891 /* LZDefaultView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EB2F64223CAEC2B00B82891 /* LZDefaultView.m in Sources */,
 				40D46EC132CB71C92A5CF3A52EA77A77 /* LZDefaultView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
