@@ -1,0 +1,6 @@
+framework module LZDefaultView {
+  umbrella header "LZDefaultView-umbrella.h"
+
+  export *
+  module * { export * }
+}

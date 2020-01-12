@@ -1,0 +1,16 @@
+PODS:
+  - LZDefaultView (0.1.0)
+
+DEPENDENCIES:
+  - LZDefaultView (from `../`)
+
+EXTERNAL SOURCES:
+  LZDefaultView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LZDefaultView: fc2ff2463ae300db4f91830995e3a046faa46429
+
+PODFILE CHECKSUM: 81d39ad5a6b40aa26984ac55f94a9d7da62c28b9
+
+COCOAPODS: 1.8.4

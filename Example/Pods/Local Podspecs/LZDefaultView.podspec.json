@@ -1,0 +1,22 @@
+{
+  "name": "LZDefaultView",
+  "version": "0.1.0",
+  "summary": "A short description of LZDefaultView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/630775508@qq.com/LZDefaultView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "630775508@qq.com": "zhuliu001@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/630775508@qq.com/LZDefaultView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LZDefaultView/Classes/**/*"
+}
