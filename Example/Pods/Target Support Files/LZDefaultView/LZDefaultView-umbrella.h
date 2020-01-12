@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "LZDefaultView.h"
 
 FOUNDATION_EXPORT double LZDefaultViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char LZDefaultViewVersionString[];
