@@ -27,13 +27,13 @@
     self = [super initWithFrame:CGRectMake(0, 0, MainWidth, MainHeigth)];
     if (self)
     {
-        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-        [self addGestureRecognizer:tap];
+        UITapGestureRecognizer * bgTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bgTapAction:)];
+        [self addGestureRecognizer:bgTap];
     }
     return self;
 }
 
-- (void)tapAction:(UIGestureRecognizer *)ges
+- (void)bgTapAction:(UIGestureRecognizer *)ges
 {
     if (self.bgViewBlock)
     {
@@ -60,8 +60,8 @@
     else
     {
         self.imageView.image = [self getImageFromRelateBundle:ImageName];
-        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTapAction:)];
-        [self.imageView addGestureRecognizer:tap];
+        UITapGestureRecognizer * imageTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTapAction:)];
+        [self.imageView addGestureRecognizer:imageTap];
         self.imageView.userInteractionEnabled = YES;
         
         self.firstLabel.text = firstString;
