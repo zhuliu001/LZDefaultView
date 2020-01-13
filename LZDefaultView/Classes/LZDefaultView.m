@@ -35,7 +35,10 @@
 
 - (void)tapAction:(UIGestureRecognizer *)ges
 {
-    [self removeFromSuperview];
+    if (self.bgViewBlock)
+    {
+        self.bgViewBlock(self);
+    }
 }
 
 - (void)setImageName:(NSString *)ImageName
@@ -57,14 +60,47 @@
     else
     {
         self.imageView.image = [self getImageFromRelateBundle:ImageName];
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTapAction:)];
+        [self.imageView addGestureRecognizer:tap];
+        self.imageView.userInteractionEnabled = YES;
         
         self.firstLabel.text = firstString;
         self.firstLabel.textAlignment = NSTextAlignmentCenter;
+        UITapGestureRecognizer * firstTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(firstTapAction:)];
+        [self.firstLabel addGestureRecognizer:firstTap];
+        self.firstLabel.userInteractionEnabled = YES;
         
         self.secondLabel.text = secondString;
         self.secondLabel.textAlignment = NSTextAlignmentCenter;
+        UITapGestureRecognizer * secondTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(secondTapAction:)];
+        [self.secondLabel addGestureRecognizer:secondTap];
+        self.secondLabel.userInteractionEnabled = YES;
         
         [self setUpConstraints];
+    }
+}
+
+- (void)secondTapAction:(UIGestureRecognizer *)tap
+{
+    if (self.secondLabelBlock)
+    {
+        self.secondLabelBlock(self.secondLabel);
+    }
+}
+
+- (void)firstTapAction:(UIGestureRecognizer *)tap
+{
+    if (self.firstLabelBlok)
+    {
+        self.firstLabelBlok(self.firstLabel);
+    }
+}
+
+- (void)imageTapAction:(UIGestureRecognizer *)tap
+{
+    if (self.imageBlock)
+    {
+        self.imageBlock(self.imageView);
     }
 }
 
