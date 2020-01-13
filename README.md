@@ -28,8 +28,20 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 {
     [super viewDidLoad];
     
-    self.defaultView.backgroundColor = [UIColor redColor];
-    [self.defaultView setImageName:@"Hacker.jpg" firstString:@"你好" secondString:@"世界"];
+    self.defaultView.backgroundColor = [UIColor cyanColor];
+    [self.defaultView setImageName:@"LZ_hacker.jpg" firstString:@"你好" secondString:@"世界"];
+    self.defaultView.bgViewBlock = ^(UIView * _Nonnull bgView) {
+        NSLog(@"%@",bgView);
+    };
+    self.defaultView.imageBlock = ^(UIImageView * _Nonnull imageView) {
+        NSLog(@"%@",imageView);
+    };
+    self.defaultView.firstLabelBlok = ^(UILabel * _Nonnull firstLabel) {
+        NSLog(@"%@",firstLabel);
+    };
+    self.defaultView.secondLabelBlock = ^(UILabel * _Nonnull secondLabel) {
+        NSLog(@"%@",secondLabel);
+    };
 }
 
 ## Requirements
