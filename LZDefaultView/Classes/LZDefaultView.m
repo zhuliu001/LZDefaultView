@@ -56,7 +56,7 @@
     }
     else
     {
-        self.imageView.image = [UIImage imageNamed:ImageName];
+        self.imageView.image = [self getImageFromRelateBundle:ImageName];
         
         self.firstLabel.text = firstString;
         self.firstLabel.textAlignment = NSTextAlignmentCenter;
@@ -122,6 +122,15 @@
         _secondLabel = secondLabel;
     }
     return _secondLabel;
+}
+
+- (UIImage *)getImageFromRelateBundle:(NSString *)imageName
+{
+    NSString * className = [NSString stringWithFormat:@"%@",[self class]];
+    NSBundle * myBundle = [NSBundle bundleForClass:[self class]];
+    NSString * path = [NSString stringWithFormat:@"%@/%@.bundle/%@",[myBundle resourcePath],className,imageName];
+    UIImage * image = [UIImage imageWithContentsOfFile:path];
+    return image;
 }
 
 @end

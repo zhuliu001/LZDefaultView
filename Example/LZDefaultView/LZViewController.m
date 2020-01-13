@@ -33,7 +33,7 @@
     [super viewDidLoad];
     
     self.defaultView.backgroundColor = [UIColor redColor];
-    [self.defaultView setImageName:@"Hacker.jpg" firstString:@"你好" secondString:@"世界"];
+    [self.defaultView setImageName:@"LZ_hacker.jpg" firstString:@"你好" secondString:@"世界"];
 }
 
 @end

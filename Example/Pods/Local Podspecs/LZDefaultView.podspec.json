@@ -1,6 +1,6 @@
 {
   "name": "LZDefaultView",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "summary": "A defaultView for VC",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zhuliu001/LZDefaultView.git",
@@ -13,12 +13,17 @@
   },
   "source": {
     "git": "https://github.com/zhuliu001/LZDefaultView.git",
-    "tag": "0.2.0"
+    "tag": "0.2.2"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "LZDefaultView/Classes/**/*",
+  "resource_bundles": {
+    "LZDefaultView": [
+      "LZDefaultView/Assets/*"
+    ]
+  },
   "frameworks": [
     "UIKit",
     "Foundation"

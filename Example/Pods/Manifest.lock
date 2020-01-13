@@ -1,5 +1,5 @@
 PODS:
-  - LZDefaultView (0.2.0):
+  - LZDefaultView (0.2.2):
     - Masonry
   - Masonry (1.1.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LZDefaultView: 0b39b61d36c5dedce6497783147bd47a6e33fd81
+  LZDefaultView: b2a0b699554b6fc1158ed3e0df90caaa1bccbb84
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 81d39ad5a6b40aa26984ac55f94a9d7da62c28b9
