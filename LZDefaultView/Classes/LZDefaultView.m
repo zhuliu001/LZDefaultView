@@ -166,6 +166,10 @@
     NSBundle * myBundle = [NSBundle bundleForClass:[self class]];
     NSString * path = [NSString stringWithFormat:@"%@/%@.bundle/%@",[myBundle resourcePath],className,imageName];
     UIImage * image = [UIImage imageWithContentsOfFile:path];
+    if (!image)
+    {
+        assert("image in bundle is nil");
+    }
     return image;
 }
 
