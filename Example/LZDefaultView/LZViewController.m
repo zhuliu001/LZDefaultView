@@ -9,10 +9,14 @@
 #import "LZViewController.h"
 #import <LZDefaultView/LZDefaultView.h>
 #import <Masonry/Masonry.h>
+#import "LZTableViewCell.h"
 
-@interface LZViewController ()
+@interface LZViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,weak)LZDefaultView * defaultView;
+
+@property(nonatomic,weak)UITableView * tableView;
+@property(nonatomic,strong)NSMutableArray * modelArray;
 
 @end
 
@@ -29,10 +33,85 @@
     return _defaultView;
 }
 
+- (UITableView *)tableView
+{
+    if (!_tableView)
+    {
+        UITableView * tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        tableView.estimatedRowHeight = 44;
+        [self.view addSubview:tableView];
+        _tableView = tableView;
+    }
+    return _tableView;
+}
+
+- (NSMutableArray *)modelArray
+{
+    if (!_modelArray)
+    {
+        NSMutableArray * modelArray = [NSMutableArray array];
+        _modelArray = modelArray;
+    }
+    return _modelArray;
+}
+
+- (void)setUpSubViews
+{
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.bottom.mas_equalTo(self.view);
+    }];
+    
+    NSArray * tempArray = @[
+    @"哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或",
+    @"哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或",
+    @"哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或",
+    @"哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或",
+    @"哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或",
+    ];
+    for (int i = 0; i < tempArray.count; i++)
+    {
+        LZModel * model = [[LZModel alloc]init];
+        model.nameString = tempArray[i];
+        [self.modelArray addObject:model];
+    }
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    [self setUpSubViews];
+}
+
+#pragma mark - tableviewDatasource & delegate
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.modelArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    static NSString * cellReuse = @"cellReuse";
+    LZTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellReuse];
+    if (!cell)
+    {
+        cell = [[LZTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuse];
+    }
+    cell.model = self.modelArray[indexPath.row];
+    return cell;
+}
+
+//设置默认图
+- (void)setUpDefaultView
+{
     self.defaultView.backgroundColor = [UIColor cyanColor];
     [self.defaultView setImageName:@"LZ_hacker.jpg" firstString:@"你好" secondString:@"世界"];
     self.defaultView.bgViewBlock = ^(UIView * _Nonnull bgView) {

@@ -7,12 +7,20 @@
 //
 
 #import "LZAppDelegate.h"
+#import "LZViewController.h"
 
 @implementation LZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    LZViewController * lzVC = [[LZViewController alloc]init];
+    UINavigationController * naviVC = [[UINavigationController alloc]initWithRootViewController:lzVC];
+    self.window.rootViewController = naviVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

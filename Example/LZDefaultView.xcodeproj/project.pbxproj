@@ -20,9 +20,10 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		782B18DD5898037BABD5CBD4 /* Pods_LZDefaultView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4354E9AC029B9A598C2520 /* Pods_LZDefaultView_Tests.framework */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8ED1E3D923D846A800DEF947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1E3D823D846A800DEF947 /* LaunchScreen.storyboard */; };
+		8ED1E3DC23D8476B00DEF947 /* LZModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1E3DB23D8476B00DEF947 /* LZModel.m */; };
+		8ED1E3DF23D8478E00DEF947 /* LZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1E3DE23D8478E00DEF947 /* LZTableViewCell.m */; };
 		A63EC76045D77A91B6A76F07 /* Pods_LZDefaultView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F831CB87FB43F60E4625135B /* Pods_LZDefaultView_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +59,11 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6FD2C0B15E0C86A0A62393E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8ED1E3D823D846A800DEF947 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ED1E3DA23D8476B00DEF947 /* LZModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZModel.h; sourceTree = "<group>"; };
+		8ED1E3DB23D8476B00DEF947 /* LZModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZModel.m; sourceTree = "<group>"; };
+		8ED1E3DD23D8478E00DEF947 /* LZTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZTableViewCell.h; sourceTree = "<group>"; };
+		8ED1E3DE23D8478E00DEF947 /* LZTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTableViewCell.m; sourceTree = "<group>"; };
 		A5932D14605E6E7E5B40B894 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AE69902A8D0B963013043CDD /* Pods-LZDefaultView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZDefaultView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LZDefaultView_Tests/Pods-LZDefaultView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E990962B665F15FC35135DDB /* LZDefaultView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LZDefaultView.podspec; path = ../LZDefaultView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -145,10 +149,13 @@
 			children = (
 				6003F59C195388D20070C39A /* LZAppDelegate.h */,
 				6003F59D195388D20070C39A /* LZAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				8ED1E3DA23D8476B00DEF947 /* LZModel.h */,
+				8ED1E3DB23D8476B00DEF947 /* LZModel.m */,
+				8ED1E3DD23D8478E00DEF947 /* LZTableViewCell.h */,
+				8ED1E3DE23D8478E00DEF947 /* LZTableViewCell.m */,
 				6003F5A5195388D20070C39A /* LZViewController.h */,
 				6003F5A6195388D20070C39A /* LZViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				8ED1E3D823D846A800DEF947 /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -277,8 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				8ED1E3D923D846A800DEF947 /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -367,8 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LZAppDelegate.m in Sources */,
+				8ED1E3DF23D8478E00DEF947 /* LZTableViewCell.m in Sources */,
 				6003F5A7195388D20070C39A /* LZViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				8ED1E3DC23D8476B00DEF947 /* LZModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,14 +413,6 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71719F9E1E33DC2100824A3D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -503,6 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -519,6 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
